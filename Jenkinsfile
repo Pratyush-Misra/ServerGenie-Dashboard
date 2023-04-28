@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Hello') {
+        stage('submit stack') {
             steps {
-                echo 'Hello World Again Trigger by webhook'
+                sh "aws cloudformation create-stack --stack-name my-vpc-jenkins --template-body file://template.yml --region 'ap-south-1'"
             }
         }
     }
