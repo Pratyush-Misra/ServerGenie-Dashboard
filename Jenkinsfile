@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World Again'
+                echo 'Hello World Again Trigger by webhook'
             }
         }
     }
